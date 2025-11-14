@@ -16,14 +16,14 @@
       min-height: 100dvh;
       text-align: center;
     }
+
     .container {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding: 40px 20px 60px;
-      max-width: 420px;
+      padding: 40px 30px 60px; /* 좌우 30px */
+      max-width: 520px;       /* PC에서 너무 넓어지지 않도록 */
       margin: 0 auto;
       box-sizing: border-box;
     }
@@ -35,11 +35,12 @@
       font-size: 26px; font-weight: bold;
       margin: 0 auto 15px;
     }
+
     h1 { margin: 10px 0 4px; font-size: 22px; }
     p.tagline { color: #666; margin: 0 0 30px; font-size: 14px; }
 
     .image-box {
-      width: min(100%, 330px);
+      width: 100%;           /* 모바일에서도 꽉 차게 */
       aspect-ratio: 3 / 2;
       border-radius: 14px;
       overflow: hidden;
@@ -53,27 +54,28 @@
       display: block;
     }
 
-    /* 링크 버튼 */
+    /* 링크 카드 */
     a.link {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;                     /* 좌우 여백 제외 전체 너비 */
+      padding: 14px 18px;
+      margin-bottom: 12px;
       text-decoration: none;
       background: #fff;
       color: #111;
       border-radius: 14px;
-      padding: 14px 18px;
-      margin-bottom: 12px;
       border: 1px solid #eee;
       transition: all 0.2s;
-      width: min(100%, 330px);
       box-sizing: border-box;
     }
+
     a.link:hover {
       background: #f3f4f6;
     }
 
-    /* 좌측 아이콘 + 텍스트 */
+    /* 왼쪽 아이콘 + 텍스트 */
     .left {
       display: flex;
       align-items: center;
@@ -105,25 +107,21 @@
       padding: 16px 0 20px;
     }
     footer a { color: inherit; text-decoration: none; }
-
-    @media (min-width: 480px) {
-      a.link, .image-box { width: 360px; }
-    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
-    <div class="logo">YN</div>
-    <h1>YOUNG</h1>
+    <div class="logo">YB</div>
+    <h1>Your Brand</h1>
     <p class="tagline">Create • Travel • Tech</p>
 
     <div class="image-box">
       <img src="sample.jpg" alt="Brand showcase image" />
     </div>
 
-    <!-- 링크들 -->
+    <!-- 링크 리스트 -->
     <a href="https://example.com" target="_blank" class="link">
       <div class="left">
         <span class="icon">🌐</span>
