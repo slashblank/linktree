@@ -110,11 +110,15 @@
       a.link, .image-box { width: 360px; }
     }
 
-    /* ⭐ 모바일에서 좌우 여백을 10px 로 줄이기 */
+    /* 🔻 여기부터 모바일 전용 조정 🔻 */
     @media (max-width: 480px) {
       .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        max-width: 100%;          /* 420px 제한 해제 */
+        padding: 32px 16px 48px;  /* 좌우 여백 줄이기 */
+      }
+      .image-box,
+      a.link {
+        width: 100%;              /* 컨테이너 안에서 꽉 차게 */
       }
     }
   </style>
@@ -131,6 +135,7 @@
       <img src="sample.jpg" alt="Brand showcase image" />
     </div>
 
+    <!-- 링크들 -->
     <a href="https://example.com" target="_blank" class="link">
       <div class="left">
         <span class="icon">🌐</span>
@@ -149,6 +154,6 @@
 
   </div>
 
-  <footer>© 2025 Your Brand · <a href="https://instagram.com/yourbrand">@yourbrand</a></footer>
+  <footer>© 2025 1 Your Brand · <a href="https://instagram.com/yourbrand">@yourbrand</a></footer>
 </body>
 </html>
