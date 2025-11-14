@@ -106,19 +106,20 @@
     }
     footer a { color: inherit; text-decoration: none; }
 
+    /* 데스크톱(태블릿 포함)에서는 기존처럼 360px */
     @media (min-width: 480px) {
       a.link, .image-box { width: 360px; }
     }
 
-    /* 🔻 여기부터 모바일 전용 조정 🔻 */
-    @media (max-width: 480px) {
+    /* 🔥 모바일 전용: 여백 최소 + 버튼/배너 풀사이즈 */
+    @media (max-width: 479px) {
       .container {
-        max-width: 100%;          /* 420px 제한 해제 */
-        padding: 32px 16px 48px;  /* 좌우 여백 줄이기 */
+        max-width: 100%;        /* 420px 제한 해제 */
+        padding: 32px 6px 48px; /* 좌우 여백 거의 최소 (6px 정도) */
       }
       .image-box,
       a.link {
-        width: 100%;              /* 컨테이너 안에서 꽉 차게 */
+        width: 100%;            /* 컨테이너 안에서 꽉 차게 */
       }
     }
   </style>
@@ -154,6 +155,6 @@
 
   </div>
 
-  <footer>© 2025 1 Your Brand · <a href="https://instagram.com/yourbrand">@yourbrand</a></footer>
+  <footer>© 2025 Your Brand · <a href="https://instagram.com/yourbrand">@yourbrand</a></footer>
 </body>
 </html>
